@@ -22,10 +22,10 @@ namespace ApiCoreHospital.Controllers
             return hospitales;
         }
 
-        [HttpGet("{idHospital}")]
-        public async Task<ActionResult<Hospital>> FindHospital(int idHospital)
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Hospital>> FindHospital(int id)
         {
-            var hospital = await repo.FindOneHospital(idHospital);
+            var hospital = await repo.FindOneHospital(id);
             return hospital;
         }
     }
